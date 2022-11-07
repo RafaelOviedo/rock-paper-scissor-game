@@ -23,7 +23,7 @@ import useStore from '../../stores/gameStore'
 import io from 'socket.io-client'
 
 const store = useStore()
-const socket = io('http://localhost:3000' || 'https://rps-socket.vercel.app/')
+const socket = io('https://rps-socket.vercel.app/')
 
 const isComponent = computed(() => {
     return store.playerOneHands.isRock ? RockHand : store.playerOneHands.isPaper ? PaperHand : store.playerOneHands.isScissor ? ScissorHand : null

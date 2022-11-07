@@ -8,7 +8,7 @@ import useStore from './stores/gameStore'
 import io from 'socket.io-client'
 
 const store = useStore()
-let socket = io('http://localhost:3000/' || 'https://rps-socket.vercel.app/')
+let socket = io('https://rps-socket.vercel.app/')
 
 onMounted(() => {
   socket.on('playersInitialData', (data) => {
